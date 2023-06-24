@@ -1,0 +1,14 @@
+.title {
+    margin-top: 40px;
+    margin-left: 30px;
+    color: rgb(14, 65, 133);
+}
+.text {
+    max-width: 600px;
+    font-weight: 500;
+    font-size: medium;
+    font-family: inherit;
+    margin-top: 40px;
+    margin-left: 30px;
+    color: rgb(14, 65, 133);
+}

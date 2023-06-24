@@ -1,9 +1,10 @@
 import Contacts from "components/modules/Contacts/Contacts";
+import Title from "components/shared/Title/Title";
 
 const ContactsPage = () => {
     return (
         <div>
-            <h1>ContactsPage</h1>
+            <Title>Contacts page</Title>
             <Contacts/>
         </div>
     )

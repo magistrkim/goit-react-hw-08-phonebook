@@ -1,18 +1,19 @@
 .btn {
-    margin-top: 20px;
-    display: inline-block;
-    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     min-width: 120px;
     padding: 10px;
     height: 30px;
-    background-color: #2196f3;
+    background-color: rgb(246, 111, 1);
     border: none;
     border-radius: 2px;
     color: #FFFFFF;
     cursor: pointer;
 
     &:hover {
-        background-color: rgb(246, 111, 1); 
+        background-color:  #2196f3; 
     }
 }
