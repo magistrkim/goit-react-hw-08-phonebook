@@ -1,7 +1,7 @@
 import TextInput from 'components/shared/TextField/TextField';
-import useForm from 'hooks/useForm';
-import initialState from '../RegisterForm/initialState';
-import fields from '../RegisterForm/fields';
+import useForm from '../../../hooks/useForm';
+import initialState from './initialState';
+import fields from './fields';
 import css from '../RegisterForm/register-form.module.css';
 import Button from 'components/shared/Button/Button';
 

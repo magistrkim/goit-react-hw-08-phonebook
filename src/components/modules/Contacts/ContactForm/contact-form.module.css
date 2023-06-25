@@ -1,37 +1,29 @@
 .block {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    width: 400px;
+    min-width: 400px;
     border-radius: 4px;
     padding: 24px;
-    margin-bottom: 20px;
-    background-color: rgb(235, 233, 233);
-    box-shadow: 2px 4px 10px rgba(29, 2, 55, 0.5);
+    background-color: rgb(223, 223, 223);
+    box-shadow: 2px 4px 10px rgba(8, 2, 55, 0.5);
 }
 .label {
-    display: block;
-    color: darkslateblue;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 24px;
+    color: rgb(14, 65, 133);
 }
 .input {
-    display: block;
-    min-width: 80%;
-    min-height: 20px;
+    margin-bottom: 30px;
+    padding: 8px;
+    border-radius: 2px;
+    border: solid 1px  rgb(123, 122, 118);;
+    background-color: rgb(246, 244, 239);
+    min-height: 30px;
 }
-.btn {
-    display: block;
-    margin: 0 auto;
-    min-width: 120px;
-    min-height: 28px;
-    margin-top: 10px;
-    display: block;
-    cursor: pointer;
-    background-color: darkslateblue;
-    font-size: 14px;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 2px 4px 4px rgba(29, 2, 55, 0.5);
+.input::placeholder {
+    font-size: 16px;
+    font-family: monospace;
+    color: rgb(14, 65, 133);
 }
+
+
+

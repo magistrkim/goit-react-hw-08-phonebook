@@ -1,5 +1,6 @@
-import { useState } from 'react';
 import PropTypes from 'prop-types';
+import useForm from 'hooks/useForm';
+import Button from 'components/shared/Button/Button';
 import css from './contact-form.module.css';
 
 const initialState = {
@@ -8,25 +9,15 @@ const initialState = {
 };
 
 const ContactForm = ({ onSubmit }) => {
-  const [state, setState] = useState({ ...initialState });
-
-  const handleChange = ({ target }) => {
-    const { name, value } = target;
-    setState(prevState => {
-      return { ...prevState, [name]: value };
-    });
-  };
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    onSubmit({ ...state });
-    setState({ ...initialState });
-  };
+  const { state, handleChange, handleSubmit } = useForm({
+    initialState,
+    onSubmit,
+  });
 
   const { name, number } = state;
 
   return (
-    <form action="" onSubmit={handleSubmit}>
+    <form action="" onSubmit={handleSubmit} className={css.form}>
       <div className={css.block}>
         <label className={css.label} htmlFor="">
           Name
@@ -46,6 +37,7 @@ const ContactForm = ({ onSubmit }) => {
         <label className={css.label} htmlFor="">
           Number
         </label>
+
         <input
           onChange={handleChange}
           value={number}
@@ -58,9 +50,7 @@ const ContactForm = ({ onSubmit }) => {
           parentheses and can start with +"
           required
         />
-        <button type="submit" className={css.btn}>
-          Add contact
-        </button>
+        <Button className={css.btn}>Add contact</Button>
       </div>
     </form>
   );

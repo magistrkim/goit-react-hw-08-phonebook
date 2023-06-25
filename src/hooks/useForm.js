@@ -1,16 +1,14 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 const useForm = ({ initialState, onSubmit }) => {
   const [state, setState] = useState({ ...initialState });
 
-  const handleChange = ({ target }) => {
+  const handleChange = useCallback(({target}) => {
+    const {name, value} = target;
     setState(prevState => {
-      const { name, value, type, checked } = target;
-      const newValue = type === 'chekbox' ? checked : value;
-
-      return { ...prevState, [name]: newValue };
-    });
-  };
+        return {...prevState, [name]: value}
+    })
+}, [setState]);
 
   const handleSubmit = event => {
     event.preventDefault();

@@ -1,11 +1,4 @@
 const fields = {
-  name: {
-    type: 'name',
-    name: 'name',
-    required: true,
-    placeholder: 'Name',
-    label: 'User name',
-  },
   email: {
     type: 'email',
     name: 'email',
