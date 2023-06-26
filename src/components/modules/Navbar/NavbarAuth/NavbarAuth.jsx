@@ -19,12 +19,6 @@ const NavbarAuth = () => {
             Login
           </Button>
         </NavLink>
-        <NavLink to="/contacts">
-          {' '}
-          <Button sx={{ my: 2, color: 'white', display: 'block' }}>
-            Contacts
-          </Button>
-        </NavLink>
       </Box>
     </Toolbar>
   );

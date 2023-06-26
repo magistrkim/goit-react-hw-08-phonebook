@@ -9,10 +9,11 @@
 }
 .label {
     font-size: 24px;
+    margin-bottom: 10px;
     color: rgb(14, 65, 133);
 }
 .input {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 8px;
     border-radius: 2px;
     border: solid 1px  rgb(123, 122, 118);;

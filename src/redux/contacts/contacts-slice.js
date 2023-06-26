@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import {
   fetchContacts,
   fetchAddContact,
-  fetchRemoveContact,
+  fetchRemoveContact
 } from './contacts-operations';
 
 const initialState = {
