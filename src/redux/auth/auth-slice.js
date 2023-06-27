@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { signup, login, current, logout } from './auth-operations';
 
 const initialState = {
-  user: {name: null, email: null},
+  user: { name: null, email: null },
   token: '',
   isLogin: false,
   loading: false,
@@ -51,16 +51,14 @@ const authSlice = createSlice({
         state.isRefreshing = true;
       })
       .addCase(current.fulfilled, (state, { payload }) => {
-        const { user, token } = payload;
         state.loading = false;
-        state.user = user;
-        state.token = token;
+        state.user = payload;
         state.isLogin = true;
         state.isRefreshing = false;
       })
       .addCase(current.rejected, (state, { payload }) => {
         state.loading = false;
-        state.token = "";
+        state.token = '';
         state.error = payload;
         state.isRefreshing = false;
       })
@@ -68,7 +66,7 @@ const authSlice = createSlice({
         state.loading = true;
         state.error = null;
       })
-      .addCase(logout.fulfilled, (state) => {
+      .addCase(logout.fulfilled, state => {
         state.loading = false;
         state.user = { name: null, email: null };
         state.token = '';

@@ -24,8 +24,8 @@ const Contacts = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-  const handleAddContact = ({ name, phone }) => {
-    dispatch(fetchAddContact({ name, phone }));
+  const handleAddContact = ({ name, number }) => {
+    dispatch(fetchAddContact({ name, number }));
   };
 
   const handleRemoveContact = id => {

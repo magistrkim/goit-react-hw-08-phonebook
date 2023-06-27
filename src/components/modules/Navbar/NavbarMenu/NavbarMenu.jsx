@@ -11,7 +11,7 @@ const pages = [
 ];
 
 const NavbarMenu = () => {
-  const isLogin = useSelector(isUserLogin)
+  const isLogin = useSelector(isUserLogin);
   const filteredPages = !isLogin ? pages.filter(page => !page.private) : pages;
   return (
     <Toolbar disableGutters>

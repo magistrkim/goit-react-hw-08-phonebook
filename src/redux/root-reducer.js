@@ -5,19 +5,20 @@ import authReducer from './auth/auth-slice';
 import contactsReducer from './contacts/contacts-slice';
 import filterReducer from './filter/filter-slice';
 
+
+const persistConfig = {
+  key: 'token',
+  storage,
+  whitelist: ['token'],
+};
+const persistedReducer = persistReducer(persistConfig, authReducer);
+
 const rootReducer = combineReducers({
-  auth: authReducer,
+  auth: persistedReducer,
   contacts: contactsReducer,
   filter: filterReducer,
 });
 
-const persistConfig = {
-  key: 'root',
-  storage,
-  whitelist: ['token'],
-};
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
-
-export default persistedReducer;
+export default rootReducer;
 
