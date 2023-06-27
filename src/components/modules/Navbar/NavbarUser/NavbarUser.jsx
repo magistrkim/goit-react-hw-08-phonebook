@@ -7,7 +7,7 @@ const NavbarUser = () => {
   const { name } = useSelector(getUser);
   const dispatch = useDispatch();
   const onLogout = () => {
-    dispatch(logout);
+    dispatch(logout());
   };
   return (
     <div className={css.wrapper}>
